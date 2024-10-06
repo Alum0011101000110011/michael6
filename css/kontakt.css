@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+    align-items: center;
+}
+
+.page-main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    clip-path: circle(20%);
+    overflow-y: auto;
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.main-container {
+    background-image: url(../img/trans.png);
+    background-repeat: repeat;
+    background-size: 50vw, 50vh; /* Set the height of michael3.png */
+}
+
+.contact-container{
+    height: 100vh;
+    width: auto;
+    display:flex;
+    align-items: center;
+}
+
+.contact-right img{
+    max-height: 55rem;
+    max-width: 55rem;
+    
+    padding-left: 5rem;
+
+}
+
+.cantact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    
+    padding-right: 5rem;
+}
+
+.contact-left-title h2 {
+    color: transparent;
+    font-weight: bold;
+    background-image: linear-gradient(
+      to right,
+      #462523 0,
+      #cb9b51 22%,
+      #f6e27a 45%,
+      #f6f2c0 50%,
+      #f6e27a 55%,
+      #cb9b51 78%,
+      #462523 100%
+    );
+    -webkit-background-clip: text;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.contact-left-title hr  {
+    border: none;
+    height: 0.3rem;
+    background-color: #cb9b51;
+    border-radius: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-inputs {
+    width: 25rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    padding-left: 2rem;
+    font-weight: 500;
+    color: #666;
+    border-radius: 2rem;
+}
+.contact-inputs-textarea {
+    
+    width: 25rem;
+    border: none;
+    outline: none;
+    padding-left: 2rem;
+    font-weight: 500;
+    color: #666;
+    border-radius: 2rem;
+    height: 10rem;
+    padding-top: 2rem;
+    border-radius: 2rem;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #cb9b51;
+}
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+.contact-left-button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(
+      to right,
+      #462523 0,
+      #cb9b51 22%,
+      #f6e27a 45%,
+      #f6f2c0 50%,
+      #f6e27a 55%,
+      #cb9b51 78%,
+      #462523 100%
+    );
+    color: #111;
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+@media (max-width:1430px) {
+    .contact-right img{
+        max-height: 35rem;
+        max-width: 35rem;
+        
+        padding-left: 2rem;
+    
+    }
+}
+
+
+@media (max-width:1100px) {
+    .contact-right{
+        display: none;
+    }
+    form{
+        margin: auto;
+        width: 80%;
+        padding: 0;
+    }
+    .contact-left-button{
+        display: flex;
+        align-items: center;
+        padding: 15px 30px;
+        font-size: 16px;
+        gap: 10px;
+        border: none;
+        border-radius: 50px;
+     
+        font-size: 1.6rem;
+        font-weight: 550;
+    }
+    .main-container {
+        background-size: 90vw, 90vh; /* Set the height of michael3.png */
+    }
+}
+
+@media (max-width:620px) {
+    .main-container {
+        background-size: 120vw, 120vh; /* Set the height of michael3.png */
+    }
+    .contact-left-button{
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        font-size: 12px;
+        gap: 7px;
+        border: none;
+        border-radius: 50px;
+     
+        font-size: 1.3rem;
+        font-weight: 450;
+    }
+
+    form {
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        padding: auto;
+        padding-left: 5rem;
+        
+    }
+
+    .contact-left-title hr  {
+        border: none;
+        height: 0.2rem;
+        background-color: #cb9b51;
+        border-radius: 0.1rem;
+        margin-bottom: 0.2rem;
+    }
+    .cantact-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .contact-left-title h2 {
+        font-size: 2.5rem;        
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .contact-left-title hr  {
+        height: 0.2rem;
+        border-radius: 0.2rem;
+        margin-bottom: 0.4rem;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .contact-inputs {
+        width: 20rem;
+        padding: 0;
+        margin: 0;
+        font-weight: 500;
+    }
+    .contact-inputs-textarea {        
+        padding: 0;
+        margin: 0;
+        width: 20rem;
+    }
+}

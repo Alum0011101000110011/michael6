@@ -1,0 +1,74 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --panel-width: calc(100% / 6);
+    --darkblue: #02020c;
+    --white: #fff;
+    --lightgray: #fafafb;
+    --color-1: #fff;
+    --text-color: #02020c;
+    --accent-color: #C9A42C;
+}
+
+.image-track > .image{
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.image-track {
+    padding-top: 5rem;
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.page-main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    clip-path: circle(20%);
+    overflow-y: 100vw;    
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.Landing-page {
+    padding-bottom: 10px;
+    /*background-image: none;*/
+    background-image:  url(../img/trans.png);
+    background-repeat: repeat;
+    background-size: 50vw, 50vh; /* Set the height of michael3.png */
+}
+
+.Container_P {
+    display: none;
+}
+
+@media (max-width:1600px) {
+    .Container_G {
+        display: none;        
+    }
+    .Landing-page {
+        background-image: none;
+    }
+    .Container_P {
+        display: grid;
+        grid-template-columns: auto;
+        padding-bottom: 10px;
+        /*background-image: none;*/
+        background-image:  url(../img/trans.png);
+        background-repeat: repeat;
+        background-size: 70vw, 70vh; /* Set the height of michael3.png */
+    }
+    .image {
+        text-align: center;
+        width: 100%;
+        height: 80%;
+        padding: 2rem 2rem 0rem 2rem;
+    }
+
+}

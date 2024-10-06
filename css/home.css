@@ -1,0 +1,253 @@
+/* RESET STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --panel-width: calc(100% / 6);
+    --darkblue: #02020c;
+    --white: #fff;
+    --lightgray: #fafafb;
+    --color-1: #fff;
+    --text-color: #02020c;
+    --accent-color: #C9A42C;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: poppins, Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+body {
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    overflow: hidden;
+}
+
+main {    
+    color: var(--white);
+}
+/* MAIN STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.panels {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 180vw;
+    height: 100%;
+    transform: translateX(-50%) skewX(-35deg);
+    clip-path: circle(100%);
+    z-index: 1;
+    background: var(--lightgray);
+}
+
+.panels .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: var(--panel-width);
+    transform: scaleY(0);
+    transform-origin: top;
+    background: var(--darkblue);
+}
+
+.panels .panel:nth-child(even) {
+    transform-origin: bottom;
+}
+
+.panels .panel:nth-child(2) {
+    left: calc(var(--panel-width) - 1px);
+}
+
+.panels .panel:nth-child(3) {
+    left: calc(calc(var(--panel-width) * 2) - 2px);
+}
+
+.panels .panel:nth-child(4) {
+    left: calc(calc(var(--panel-width) * 3) - 4px);
+}
+
+.panels .panel:nth-child(5) {
+    left: calc(calc(var(--panel-width) * 4) - 5px);
+}
+
+.panels .panel:nth-child(6) {
+    left: calc(calc(var(--panel-width) * 5) - 6px);
+}
+
+.page-main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    clip-path: circle(20%);
+    overflow-y: auto;    
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.page-main > div {
+    margin: auto;
+    /*    text-align: center;*/
+}
+
+
+/* main
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.main-container {
+    height: 100%;
+    width: 100%;
+    
+    --darkblue: #111;
+    /* Apply michael3.png with a fixed height */
+    background-image: url(../img/michael3.png), url(../img/trans.png);
+    background-repeat: no-repeat, repeat;
+    background-position: bottom center, center;
+    background-size: auto 90vh, auto; /* Set the height of michael3.png */
+
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Landing-page{
+    width: 100%;
+    height: 100%;
+
+}
+
+.button-buchen {
+    color: transparent;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background-image: linear-gradient(
+      to right,
+      #462523 0,
+      #cb9b51 22%,
+      #f6e27a 45%,
+      #f6f2c0 50%,
+      #f6e27a 55%,
+      #cb9b51 78%,
+      #462523 100%
+    );
+    -webkit-background-clip: text;
+    font-size: 3rem;
+    max-width: 25rem;
+}
+
+@media (max-width: 1420px) {
+    .panels {
+        width: 200vw;
+    }
+    div .main-quotes  {
+        display: none;
+    }
+    main .main-intro {
+        padding-right: 35rem;
+        font-size: 1rem;
+    }
+    main .main-intro h1{
+        font-size: 5rem;
+    }
+    main .main-intro a{
+        font-size: 2rem;
+    }
+    .main-container {
+        background-position: 80% 20%;
+        
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .main-container {
+        background-image: url(../img/trans.png);
+        background-size:cover;
+    }
+    main .main-intro {
+        padding-right: 0;
+        margin-bottom: 5rem;
+        font-size: 1rem;
+    }
+    main .main-intro h1{
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    main .main-intro p{        
+        margin-bottom: 4rem;
+    }
+    main .main-intro a{
+        font-size: 2rem;
+    }
+    .main-container {
+        background-repeat: no-repeat;
+        background-attachment: flex;
+        background-position: 80% 20%;
+    }
+}
+
+@media (min-width: 1420px) {
+        
+    main .main-intro h1 {
+        font-size: 96px;
+        line-height: 106px;
+
+    }
+
+    main .main-quotes {
+        max-width: 35rem;
+        padding-right: 7rem;
+    }
+
+    main .main-intro p , main .main-quotes p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    main a {
+        margin-top: 30px;
+        font-size: 18px;
+        display: block;
+        background-color: #C9A42C;
+        padding: 10px 20px;
+        width: fit-content;
+    }
+
+    main .main-quotes p {
+        border-left: 0.3rem solid #C9A42C;
+        padding-left: 2rem;
+        margin: 5rem 0;
+    }
+
+    main .main-quotes p:nth-child(2)  {
+        margin-left:  100px;
+    }
+
+    main .main-intro {
+        position: relative;
+        right: 15vh;
+        padding-bottom: 8vh;
+        padding-left: 5rem;
+    }
+
+    main .main-quotes {
+        position: relative;
+        left: 24vh;
+        padding-bottom: 8vh;
+
+    }
+}
